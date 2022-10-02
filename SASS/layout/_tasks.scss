@@ -1,0 +1,54 @@
+@media screen and(max-width:767px) {
+    .page_tasks {
+        display: none;
+    }
+}
+
+@media screen and(min-width:768px) {
+    .page_tasks {
+        display: none;
+    }
+}
+
+@media screen and(min-width:1200px) {
+    .page_tasks {
+        padding-top: 0;
+        display: block;
+    }
+
+    .tasks__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        font-style: normal;
+        text-align: center;
+        color: var(--primary-text-color-theme-light);
+        margin-bottom: 50px;
+    }
+
+    .tasks_list {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    .tasks_list__overlay {
+        position: absolute;
+        width: 370px;
+        height: 70px;
+        bottom: 0px;
+        left: 0;
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+        background: rgba(47, 48, 58, 0.8);
+        color: var(--primary-text-color-theme-dark);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tasks_list__item {
+        position: relative;
+    }
+}

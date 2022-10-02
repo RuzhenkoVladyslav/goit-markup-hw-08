@@ -1,0 +1,147 @@
+.menu {
+    display: none;
+}
+
+.contacts_header {
+    display: none;
+}
+
+.menu__link {
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    border: 1px solid #ECECEC;
+
+}
+
+
+@media screen and (min-width:768px) {
+    .page_nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .page_nav__logo_first {
+        margin-right: 87px;
+    }
+
+    .menu {
+        display: flex;
+        column-gap: 50px;
+
+    }
+
+    .menu__link {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: var(--primary-text-color-theme-light);
+        transition: color var(--transition-dur-and-func);
+        position: relative;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+
+    .contacts_header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: auto;
+
+    }
+
+
+    .contacts_header__link {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        color: var(--secondary-text-color-theme-light);
+        display: flex;
+        align-items: center;
+        transition: color var(--transition-dur-and-func);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+
+    .current {
+        color: var(--accent-color);
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+    }
+
+    .contacts_header__icon {
+        margin-right: 10px;
+        fill: currentColor;
+    }
+
+}
+
+
+@media screen and (min-width:1200px) {
+    .header__container {
+        justify-content: flex-start;
+    }
+
+    .contacts_header {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .contacts_header__link {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+
+    }
+
+    .page_nav__logo_first {
+        margin-right: 92px;
+    }
+
+    .current {
+        color: var(--accent-color);
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+    }
+}

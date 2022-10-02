@@ -1,0 +1,136 @@
+.page_team {
+    background-color: var(--team-buttons-background-color);
+}
+
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.team__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    font-style: normal;
+    text-align: center;
+    color: var(--primary-text-color-theme-light);
+    margin-bottom: 50px;
+}
+
+
+
+.team_list__content {
+
+    background-color: var(--primary-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+}
+
+.team_list__text {
+    padding: 30px 0;
+}
+
+.team_list__subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+
+.team_list__item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    font-style: normal;
+    text-align: center;
+    color: var(--secondary-text-color-theme-light);
+}
+
+.social_list {
+
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 16px;
+
+}
+
+.social_list__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--primary-color-icons);
+    transition: background-color var(--transition-dur-and-func), color var(--transition-dur-and-func);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        color: var(--primary-background-color);
+    }
+}
+
+.social_list__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: fill var(--transition-dur-and-func);
+
+    .social_list__link:hover &,
+    .social_list__link:focus & {
+        fill: var(--secondary-color-icons);
+    }
+}
+
+@media screen and(max-width:767px) {
+    .team_list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+}
+
+@media screen and(min-width:768px) {
+    .container {
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .team_list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+@media screen and(min-width:1200px) {
+    .team_list {
+        flex-wrap: nowrap;
+    }
+
+    .container {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .team__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+    }
+}
